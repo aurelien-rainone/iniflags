@@ -144,12 +144,8 @@ func sighupHandler(ch <-chan os.Signal) {
 }
 
 func parseConfigFlags() (oldFlagValues map[string]string, ok bool) {
+
 	configPath := *config
-	if !strings.HasPrefix(configPath, "./") {
-		if configPath, ok = combinePath(os.Args[0], *config); !ok {
-			return nil, false
-		}
-	}
 	if configPath == "" {
 		return nil, true
 	}
