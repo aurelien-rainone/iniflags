@@ -18,7 +18,7 @@ import (
 
 var (
 	allowUnknownFlags    = flag.Bool("allowUnknownFlags", false, "Don't terminate the app if ini file contains unknown flags.")
-	config               = flag.String("config", "", "Path to ini config for using in go flags. May be relative to the current executable path.")
+	config               = flag.String("config", "", "Path to ini config for using in go flags.")
 	configUpdateInterval = flag.Duration("configUpdateInterval", 0, "Update interval for re-reading config file set via -config flag. Zero disables config file re-reading.")
 	dumpflags            = flag.Bool("dumpflags", false, "Dumps values for all flags defined in the app into stdout in ini-compatible syntax and terminates the app.")
 )
